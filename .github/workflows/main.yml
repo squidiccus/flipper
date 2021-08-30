@@ -25,6 +25,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
+      - name: restores packages
+      - run: npm restore
+
       # Runs a single command using the runners shell
-      - name: Run a one-line script
+      - name: creates a production build
         run: npm run build
